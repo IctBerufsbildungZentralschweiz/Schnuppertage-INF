@@ -2,29 +2,142 @@
 <html lang="de" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Helper Seite für Scnupperkursteilnehmende</title>
+    <title>Helper Seite für Schnupperkursteilnehmende</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="grid.css">
   </head>
   <body>
-    <h1>Hier siehst fu Beispiele wie du deine HTML-Seite gestalten kannst</h1>
+    <div class="fancyTextBlau">
+      <h1>HTML Helper</h1>
 
-    <div class="html-table">
-      <style>
-        table {
-          border-collapse: collapse;
-        }
+      <nav>
+        <ul class="ull">
+          <li class="lii"><a class="aa" class="active" href="index.html">HTML Helper</a></li>
+          <li class="lii"><a class="aa" href="css.html">CSS Helper</a></li>
+        </ul>
+      </nav>
+    </div>
+    <hr>
 
-        td, th {
-          border: 1px solid #dddddd;
-          text-align: left;
-          padding: 8px;
-        }
-    </style>
+  <div class="row schritt1">
+    <div class="grundgeruestCode">
 
-    <!-- TODO:
-    |Plain Code | Erklärung der Einzelnen Tags | Bild (gerenderter HTML Code)
-    -->
+      <h2>Schritt 1: HTML Grundgerüst</h2>
+      <p>Das ist das in der Präsentation erwähnte HTML Grundgerüst. Kopiere diesen Code in dein <b>index.html</b> file. </p>
 
-      <h2>HTML Table</h2>
+        <xmp class="codeSnippet">
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <title>Meine erste Webseite</title>
+  </head>
+
+  <body>
+    <p class="text">Test ob die Webseite funktioniert</p>
+  </body>
+
+</html>
+        </xmp>
+
+    <p>Kopiere diesen Code in dein <b>style.css </b> file.</p>
+        <xmp class="codeSnippet">
+.text {
+  color: green;
+}
+      </xmp>
+
+      <p>Speichere deine beiden Files und doppelklicke das index.html. <br>
+        Wenn auf deiner Webseite der Text: "Test ob die Webseite funktioniert" in grün erscheint, hast du alles richtig gemacht! <br>
+        Wenn nicht, dann frag mich oder schau in der Anleitung ob du nicht etwas falsch gemacht hast. <br>
+      </p>
+      <p><b>WICHTIG:</b> Dein Code schreibst du nur innerhalb des öffnenden und des schliessenden Body-Tags.</p>
+    </div>
+
+    <div class="grundgeruestErklaerung">
+      <h2>Schritt 1: Erkärung</h2>
+      <p>Das <b>&lt;!DOCTYPE html&gt;</b> sagt dem Browser, das es sich um ein HTML File handelt.<br>
+        Die Sprache, die der Browser verwenden soll, wird sozusagen bekannt gegeben.</p>
+
+      <p><b>&lt;html&gt;</b>: Das ist das öffende html-Tag. Findest du das schliessende?</p>
+      <p>Anschliessend folgt das <b>&lt;head&gt;</b> Tag. Hier sind Informationen vorhanden, welche der Browser braucht. <br>
+      Z.B.: Die Codierung der Sprache. <br>
+      Weiter folgt der Link zum CSS File und zum Schluss ist der Titel der Webseite. Den Text im Titel der Webseite <br>
+      kannst du anpassen.
+      Du findest den Titel als Text oben im Browser Tab.
+      </p>
+      <p>Zuletzt folgt das <b>&lt;body&gt;</b>. Hierdrin befindet sich der Code.</p>
+
+      <br>
+      <p><b>CSS (Cascading Style Sheet) </b></p>
+      <p>Im Body-Tag deines HTML findest du ein p-Tag. Das p-Tag beinhaltet nur Text und bedeutet paragraph. <br>
+        Wie du auch siehst, hat das p-tag ein Attribut welches <b>class</b> heisst. <br>
+        Der Name der Klasse kannst du frei wählen. Achte darauf, dass der Name innerhalb der Hochkommas <br>
+        und am selben Ort, wie im Beispiel steht.</p>
+      <p>Du greifst nun auf die Klasse "text" zu. Indem du <b>.text {}</b> im CSS File schreibst. <br>
+      Nun kannst du diverse CSS Attribute wie "color" definieren.</p>
+      <p><b>Zum ausprobieren: </b></p>
+      <ul>
+        <li>Ändere die Farbe des Textes</li>
+        <li>Verändere die Grösse oder die Schriftart</li>
+      </ul>
+      <p>Änderungen musst du nur im CSS File machen. Der Text steht ja schon.<br>
+        Hilfe zu den CSS Tags findest du <a href="css.html">hier</a></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="grundgeruestCode">
+        <h2>HTML Tabellen</h2>
+        <div style="float: left;">
+        <p>HTML</p>
+        <xmp class="codeSnippetSmall">
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+        </xmp>
+      </div>
+
+      <div style="float: left; padding-left: 10px" >
+        <p>CSS</p>
+        <xmp class="codeSnippetSmall" >
+table {
+border-collapse: collapse;
+}
+
+td, th {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+}
+        </xmp>
+      </div>
+
+    </div>
+
+    <div class="grundgeruestErklaerung">
+      <h2>Erklärung</h2>
+      <p>Das <b>&lt;table&gt;</b> Tag beinhaltet die Tabelle mit ihren Zeilen und Spalten.</p>
+      <p>Das <b>&lt;tr&gt;</b> Tag heisst augeschrieben Table Row (Zeile).</p>
+      <p>Das <b>&lt;th&gt;</b> Tag heisst augeschrieben Table Header. Das ist der Titel der Spalte</p>
+      <p>Das <b>&lt;td&gt;</b> Tag heisst augeschrieben Table Data. Hier schreibst du den entsprechenden Wert welcher zum Titel gehört. <br>
+      Achte auf die Rheinfolge, in welcher du die Tags schreibst.</p>
+      <p>Das CSS brauchst du nur in dein File zu kopieren. Falls du doch wissen möchtest, wie das genauer funktioniert frag mich :)</p>
+
+      <h2>So sieht die Tabelle am Schluss aus</h2>
       <table>
         <tr>
           <th>Company</th>
@@ -47,36 +160,208 @@
           <td>Austria</td>
         </tr>
       </table>
+      <style>
+        table {
+          border-collapse: collapse;
+        }
+
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+    </style>
 
     </div>
+  </div>
+  <hr>
 
-    <div class="html-list">
-      <div class="plain-html">
-        <script type="text/javascript">
-          var s = "/<ul/>";
-          var eingabe  = document.getElementById('text').innerHTML = s;
-
-    <!-- TODO: evtl mit script als tect ausgeben oder ein bild davon  -->
-
-        </script>
-        <p id = "text">
-          <ul>
-            <li>Coffee</li>
-            <li>Tea</li>
-            <li>Milk</li>
-          </ul>
-        </p>
+  <div class="row">
+    <div class="grundgeruestCode">
+      <h2>HTML Liste</h2>
+      <div>
+        <p>HTML</p>
+        <xmp class="codeSnippetSmall">
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+        </xmp>
       </div>
-      <h2>An unordered HTML list</h2>
 
+    </div>
+    <div class="grundgeruestErklaerung">
+      <h2>Erklärung</h2>
+      <p><b>&lt;ul&gt;</b> steht für unordered list</p>
+      <p><b>&lt;li&gt;</b> steht für list item</p>
+
+      <h2>So sieht die Liste am Schluss aus</h2>
       <ul>
         <li>Coffee</li>
         <li>Tea</li>
         <li>Milk</li>
       </ul>
     </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="grundgeruestCode">
+      <h2>Überschriften</h2>
+      <p>HTML</p>
+      <xmp class="codeSnippetSmall">
+<h1></h1>
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6>
+      </xmp>
+      <br>
+      <br>
+      <br>
+
+    </div>
+    <div class="grundgeruestErklaerung" style="padding-right: 10px">
+      <h2>Erklärung</h2>
+      <p>Mit diesen 6 Tags kannst du unterschiedlich grosse Titel machen.</p>
+    </div>
+    <div class="grundgeruestErklaerung" style="border-left: 1px solid black; ">
+      <h2>So sehen die Titel am Schluss aus</h2>
+      <h1>Titel</h1>
+      <h2>Titel</h2>
+      <h3>Titel</h3>
+      <h4>Titel</h4>
+      <h5>Titel</h5>
+      <h6>Titel</h6>
+    </div>
+  </div>
+<hr>
+
+<div class="row">
+  <div class="grundgeruestCode">
+    <h2>Text</h2>
+    <div style="float: left;">
+      <p>HTML</p>
+      <xmp class="codeSnippetSmall">
+<p>Normaler Text</p>
+
+<p>Ein Text mit <br>
+  Zeilenumbruch</p>
+
+<p class="left">Linksbündig</p>
+
+<p class="right">Rechtsbündig</p>
+
+<p class="center">Zentriert</p>
+      </xmp>
+    </div>
 
 
+    <div style="float: left; padding-left: 10px">
+      <p>CSS</p>
+      <xmp class="codeSnippetSmall">
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+      </xmp>
+    </div>
+  </div>
+  <div class="grundgeruestErklaerung">
+    <h2>Erklärung</h2>
+    Du kannst mithilfe von CSS Texte oder Bilder links, rechts oder mittig bündig definieren.
 
+    <h2>So sieht der Text dann aus</h2>
+    <div style="border: 1px solid black; padding: 0px 10px; width: 400px">
+      <p>Normaler Text</p>
+      <p>Ein Text mit <br>
+        Zeilenumbruch</p>
+      <p class="left">Linksbündig</p>
+      <p class="right">Rechtsbündig</p>
+      <p class="center">Zentriert</p>
+    </div>
+
+<style>
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+
+</style>
+
+  </div>
+
+</div>
+<hr>
+
+
+<div class="row">
+  <div class="grundgeruestCode">
+    <h2>Textformatierungen</h2>
+    <p>HTML</p>
+    <xmp class="codeSnippetSmall">
+<p>Normaler Text</p>
+<i>Italic steht für kursiv.</i>
+<b>Bold steht für fett.</b>
+<u>Underlined.</u>
+<tt>Teletyper.</tt>
+<s>Strikeout.</s>
+    </xmp>
+  </div>
+  <div class="grundgeruestErklaerung">
+    <h2>Erklärung</h2>
+    <p>Du kannst Texte wie im Bespiel unterschiedlich formatieren.</p>
+
+    <h2>So sieht das Ganze dann aus</h2>
+    <p>Normaler Text <br>
+    <i>Italic steht für kursiv.</i> <br>
+    <b>Bold steht für fett.</b> <br>
+    <u>Underlined.</u> <br>
+    <tt>Teletyper.</tt> <br>
+    <s>Strikeout.</s> <br>
+    </p>
+  </div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="grundgeruestCode">
+    <h2>Bilder</h2>
+    <p>HTML</p>
+    <xmp class="codeSnippetBild">
+<img src="https://i.stack.imgur.com/ukC2U.jpg" alt="Das Bild ist nicht verfügbar.">
+    </xmp>
+  </div>
+  <div class="grundgeruestErklaerung">
+    <h2>Erklärung</h2>
+    <p>Das <b>&lt;img&gt;</b> Tag, verweist auf ein Bild. <br>
+      Mit dem <b>src</b> Attribut, kannst du ein Bild aus dem Internet angeben.</p>
+    <p>Das <b>alt</b> Attribut, ist der alternative Text oder das alternative Bild, <br>
+       welches angezeigt wird wenn ein Fehler mit dem Anzeigen deines Bildes passiert.</p>
+  </div>
+  <div class="grundgeruestErklaerung" style="border-left: 1px solid black; ">
+    <h2>So sieht das Bild dann aus</h2>
+    <!-- Quelle https://riptutorial.com/de/markdown/example/2319/bilder-im-referenzstil -->
+  <img src="https://i.stack.imgur.com/ukC2U.jpg" alt="">
+  </div>
+</div>
+
+<hr>
+<div class="row">
+    <p class="fancyTextPink">Wenn du Fragen hast, wende dich an mich. <br>
+      Viel Spass :)</p>
+</div>
   </body>
 </html>
